@@ -51,7 +51,7 @@ function countdown() {
   
   if(seconds <= 0) {
     minutes--
-    seconds = 3
+    seconds = 60
   }
   handleBoxShadow()
   updateDisplay(minutes, seconds - 1)
