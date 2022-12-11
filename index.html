@@ -10,24 +10,52 @@
 </head>
 <body>
 <main class="main">
+  <div class="inputs">
+    <input type="radio" name="contadores" id="timerInput" checked/>
+    <label for="timerInput">Temporizador</label>
+    <input type="radio" name="contadores" id="watchInput" class="stopwatchInput"/>
+    <label for="watchInput">Cronômetro</label>
+  </div>
   <div class="timer">
-      <span class="minutes">01</span>
+  <div class="timeDisplay">
+      <span class="minutesTimer">01</span>
       <span>:</span>
-      <span class="seconds">00</span>
+      <span class="secondsTimer">00</span>
   </div>
   <div id="controls">
-   <button class="buttonPlay">
+   <button class="buttonPlayTimer">
      <img src="/SVG/play.svg" alt="Botão de começar" />
    </button> 
-   <button class="buttonPause hide">
+   <button class="buttonPauseTimer hide">
      <img src="/SVG/pause.svg" alt="Botão de parar" />
    </button>
-   <button class="buttonStop hide">
+   <button class="buttonStopTimer hide">
      <img src="/SVG/stop.svg" alt="Botão de Recomeçar" />
    </button>
    <button class="buttonSetTimer">
      <img src="/SVG/wacth.svg" alt="Botão de configurar" />
    </button>
+  </div>
+  </div>
+  <div class="stopwatch">
+  <div class="timeDisplay">
+      <span class="minutesDisplayWatch">00</span>
+      <span>:</span>
+      <span class="secondsDisplayWatch">00</span>
+      <span>,</span>
+      <span class="milisecondsDisplayWatch">000</span>
+  </div>
+  <div id="controls">
+   <button class="buttonPlayWatch">
+     <img src="/SVG/play.svg" alt="Botão de começar" />
+   </button> 
+   <button class="buttonPauseWatch hide">
+     <img src="/SVG/pause.svg" alt="Botão de parar" />
+   </button>
+   <button class="buttonStopWatch hide">
+     <img src="/SVG/stop.svg" alt="Botão de Recomeçar" />
+   </button>
+  </div>
   </div>
 </main>
 <footer>
