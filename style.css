@@ -4,7 +4,6 @@
   border-sizing: border-box;
 }
 
-
 :root {
   --bg-color: hsl(179, 48%, 8%);
   
@@ -15,6 +14,7 @@
   --text-color: #FFFFFF;
   
   font-size: 62.5%;
+  
 }
 
 body {
@@ -31,9 +31,8 @@ main {
   align-self: end;
   justify-self: center;
   
-  padding: 3rem;
+  padding: 2rem;
   border-radius: 4rem;
-  
 }
 
 button {
@@ -47,6 +46,18 @@ button img {
   width: clamp(3.2rem, 2rem + 12vw, 6.4rem);
 }
 
+label {
+  padding-bottom: 2rem;
+}
+
+.timer {
+  display: var(--display-show-timer);
+}
+
+.stopwatch {
+  display: var(--display-show-stopwatch);
+}
+
 .hide {
   display: none;
   transition: 0.3s;
@@ -56,11 +67,18 @@ button img {
   box-shadow: 0px 0px 190px 41px hsl(179, 34%, 23%)
 }
 
-.timer {
-  font-size: clamp(4rem, 4rem + 10vw, 8.8rem);
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(0.5rem, 4rem + 10vw, 2rem);
+}
+
+.timeDisplay {
+  font-size: clamp(4rem, 4rem + 10vw, 7rem);
   
   display: flex;
-  
   margin-bottom: 1.6rem;
 }
 
@@ -74,8 +92,7 @@ button img {
   
   border-radius: 9999px;
   
-  width: clamp(10rem, 10rem + 30vw, 22.8rem);
-  height: clamp(8rem, 5rem + 10vw, 10.8rem );
+  width: 100%;
 }
 
 footer {
@@ -83,3 +100,29 @@ footer {
   justify-self: end;
   margin: 0 3rem 3rem 0;
 }
+
+#timerInput,
+:root:has(#timerInput:checked) {
+  --display-show-timer: block;
+  --display-show-stopwatch: none;
+}
+
+.stopwatchInput,
+:root:has(.stopwatchInput:checked) {
+  --display-show-stopwatch: block;
+  --display-show-timer: none;
+}
+
+input[type="radio"] {
+  appearance: none;
+  border: 2px solid white;
+  width: clamp(1rem, 4rem + 10vw, 2rem);
+  height: clamp(1rem, 4rem + 10vw, 2rem);
+  border-radius: 50%;
+}
+
+input[type="radio"]:checked {
+  background-color: hsl(192, 34%, 83%);
+}
+
+
